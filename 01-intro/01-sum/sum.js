@@ -1,5 +1,11 @@
 function sum(a, b) {
-  /* ваш код */
+  [a, b].some((el) => {
+    if (typeof el !== 'number') {
+      throw new TypeError('если аргументы - не числа');
+    }
+  });
+
+  return a + b;
 }
 
 module.exports = sum;
